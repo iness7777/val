@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happy v day!</title>
+    <link href="https://fonts.cdnfonts.com/css/arcade-classic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="si.css">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/arcade-classic');
+
+        .valentine-text {
+            text-align: center;
+            margin-bottom: 20px; /* Add margin to separate text and image */
+        }
+
+        .cat-image {
+            display: block;
+            margin: 0 auto;
+            position: relative; /* Make the image position relative */
+            top: 150px; /* Adjust the top position */
+        }
+    </style>
+</head>
+<body>
+<div class="main"></div>
+<!-- stars background -->
+<script>
+    function randomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min
+    }
+
+    const STAR_COUNT = 400
+    let result = ""
+    for(let i = 0; i < STAR_COUNT; i++){
+        result += `${randomNumber(-50, 50)}vw ${randomNumber(-50, 50)}vh ${randomNumber(0, 1)}px ${randomNumber(0, 1)}px #fff,`
+    }
+    console.log(result.substring(0, result.length - 1))
+</script>
+<div class="valentine-text">
+    I LOVE YOUUUUUUUUUUUUUUUUUUUUU<br>
+    (click on chipy chipy cat)
+</div>
+<a href="https://open.spotify.com/playlist/05TaDgPus8EXoaTDTCBAs9?si=5ee80435c5cc4b66">
+    <img class="cat-image" src="cc.gif" alt="gato">
+</a>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happy v day!</title>
+    <link href="https://fonts.cdnfonts.com/css/arcade-classic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="si.css">
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/arcade-classic');
+    </style>
+</head>
+
+<body>
+    <div class="main"></div>
+
+    <!-- stars background -->
+    <script>
+        function randomNumber(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+    
+        const STAR_COUNT = 400
+        let result = ""
+        for(let i = 0; i < STAR_COUNT; i++){
+            result += `${randomNumber(-50, 50)}vw ${randomNumber(-50, 50)}vh ${randomNumber(0, 1)}px ${randomNumber(0, 1)}px #fff,`
+        }
+        console.log(result.substring(0, result.length - 1))
+    </script>
+
+    <!-- slidshow ktiba -->
+    <div class="slideshow-container">
+    <div class="phrase-slide">hi  babe,<br> it s  your  love  rami  here!  </div>
+    <div class="phrase-slide">thanks  for  being  the  prettiest,  smartest,  sweetest,  most  caring  and  thoughtful  gf  ever</div>
+    <div class="phrase-slide">maybe  we  just  met  for  like  an  hour,<br>  i can  tell  since  then  my  heart  l  beats  mte3ou  dakhlou  f  7it </div>
+    <div class="phrase-slide">me when i saw u:</div>
+    <div class="phrase-slide">i  know  i  kinda  don t  have  the  right  <br>to  say  a  lot  of  stuff  since  i  saw  u  like  once  in  my  life  <br>and we almost dont spend time together </div>
+    <div class="phrase-slide">but trust me,<br> elli fel 9alb fel 9alb,<br> u have no idea how much i appreciate ur existance <br>, u make me a better person </div>
+    </div>
+  
+    <!-- slidshow imgs -->
+    <div class="image-slideshow-container">
+        <img class="image-slide" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc21jZHZyazdoMjFwb2s5M3BoZmw3NGp1d250bHhlb3RmY25vdmhscCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WiM5K1e9MtEic/giphy.gif" alt="babushka rami">
+        <img class="image-slide" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbG45eHRhYmFnZXdkaG55ZTgxYWlxcHc3dGlsaDZieHJkcnVrZHFrayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/w4ArGzUybHd0Q/giphy.gif" alt="wink wink">
+        <img class="image-slide" src="sisi.png" alt="hi there">
+        <img class="image-slide" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExejZkYXVlNGR1Mms4bHEzd2xsOGNueXM4NGgwZHViaDV3YnhtYjB6biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3NtY188QaxDdC/giphy.gif" alt="me af">
+        <img class="image-slide" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmpydGlrcjU1bXpwZDMxb3JvNjd0dzMwbzM1ODNzMmJieGhzNWUzNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tGw1AekOKUSWncbAqd/giphy.gif" alt="SAD">
+        <img class="image-slide" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmpqb2ZyaGFraWw5cTRpa29kMTZsbG5venVsMzJlOTdndTJnY3g2MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/enrq327a3sMIJAS5jA/giphy.gif" alt="ily">
+    
+        
+    </div>
+
+    <!-- btn stuff -->
+    <button id="startBtn" class="btn" onclick="startSlideshow()">lessgo</button>
+    <script>
+// JavaScript for controlling the slideshow
+let slideIndex = 0;
+const slides = document.getElementsByClassName("phrase-slide");
+const images = document.getElementsByClassName("image-slide");
+
+function showSlide() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                images[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+            images[slideIndex].style.display = "block";
+            slideIndex++;
+        }
+
+        let slideshowInterval;
+
+        function startSlideshow() {
+            showSlide(); // Show the first slide immediately
+            slideshowInterval = setInterval(showSlide, 7000);
+            document.getElementById("startBtn").style.display = "none";
+        }
+</script>
+
+<!-- 2eme btn -->
+<input id="startBtn" type="button" value="click me later" onclick="redirectToPage()">
+
+<script>
+function redirectToPage() {
+    window.location.href = 'sival2.html';
+}
+</script>
+
+
+</body>
+</html>
